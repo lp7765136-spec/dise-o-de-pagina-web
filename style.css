@@ -1,0 +1,165 @@
+:root{
+  --rojo:#b3262a; --rojo-oscuro:#8a1a1f; --tomate:#d63a2f; --amarillo:#f2b632; --crema:#fbf3e0; --crema-2:#f3e6c8;
+  --cafe:#3a2218; --texto:#4a3329;
+  --titulo:'Fraunces',Georgia,serif; --cuerpo:'Nunito Sans','Segoe UI',system-ui,sans-serif; --script:'Pacifico','Brush Script MT',cursive;
+  /* Mantel a cuadros (gingham) */
+  --cuadros:conic-gradient(rgba(255,255,255,.09) 25%,transparent 0 50%,rgba(255,255,255,.09) 0 75%,transparent 0) 0 0/56px 56px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font-family:var(--cuerpo);color:var(--texto);background:var(--crema);line-height:1.65;font-size:1.05rem;overflow-x:hidden}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--titulo);color:var(--cafe);line-height:1.15;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amarillo);outline-offset:3px}
+.contenedor{width:min(1120px,92%);margin-inline:auto}
+section{padding:5.5rem 0}
+
+/* Botones */
+.btn{display:inline-block;padding:.9rem 1.8rem;border-radius:999px;font:inherit;font-weight:800;text-decoration:none;border:3px solid transparent;cursor:pointer;transition:transform .2s,background .2s,color .2s,box-shadow .2s,border-color .2s}
+.btn-amarillo{background:var(--amarillo);color:var(--cafe);box-shadow:0 5px 0 #c58e12}
+.btn-amarillo:hover{background:#fff;transform:translateY(-4px);box-shadow:0 9px 0 #c58e12}
+.btn-claro{border-color:var(--crema);color:var(--crema)}
+.btn-claro:hover{background:var(--crema);color:var(--rojo);transform:translateY(-4px)}
+.btn-rojo{background:#fff;color:var(--rojo);border-color:var(--rojo);padding:.6rem 1.3rem}
+.btn-rojo:hover{background:var(--rojo);color:#fff;transform:translateY(-4px) rotate(-2deg);box-shadow:0 8px 16px rgba(179,38,42,.3)}
+
+/* Cabecera */
+.cabecera{position:sticky;top:0;z-index:50;background:var(--rojo-oscuro);color:#fff;border-bottom:4px solid var(--amarillo)}
+.barra{display:flex;align-items:center;justify-content:space-between;height:68px}
+.marca{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--script);font-size:1.5rem;color:var(--amarillo)}
+.marca svg{width:40px;height:40px;transition:transform .4s}
+.marca:hover svg{transform:rotate(360deg)}
+.nav-lista{display:flex;gap:.4rem;list-style:none;margin:0;padding:0}
+.nav-lista a{display:block;padding:.5rem 1rem;border-radius:999px;text-decoration:none;font-weight:800;transition:background .2s,color .2s,transform .2s}
+.nav-lista a:hover{background:var(--amarillo);color:var(--cafe);transform:translateY(-2px)}
+
+/* Hamburguesa */
+.hamburguesa{display:none;background:none;border:2px solid var(--amarillo);border-radius:10px;width:46px;height:42px;cursor:pointer;padding:0;position:relative}
+.hamburguesa span,.hamburguesa span::before,.hamburguesa span::after{position:absolute;left:10px;right:10px;height:3px;background:var(--amarillo);border-radius:2px;transition:transform .25s}
+.hamburguesa span{top:18px}
+.hamburguesa span::before,.hamburguesa span::after{content:"";left:0;right:0}
+.hamburguesa span::before{top:-8px}
+.hamburguesa span::after{top:8px}
+.hamburguesa[aria-expanded="true"] span{background:transparent}
+.hamburguesa[aria-expanded="true"] span::before{transform:translateY(8px) rotate(45deg)}
+.hamburguesa[aria-expanded="true"] span::after{transform:translateY(-8px) rotate(-45deg)}
+
+/* Inicio */
+.inicio{position:relative;background:var(--cuadros),var(--rojo);color:var(--crema);padding:4.5rem 0 8rem;overflow:hidden}
+.inicio::before{content:"";position:absolute;width:520px;height:520px;right:-120px;top:-140px;border-radius:50%;background:radial-gradient(circle,rgba(242,182,50,.35),transparent 65%)}
+.inicio-grid{position:relative;display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center}
+.logo-grande{width:96px;height:96px;margin-bottom:.8rem;animation:flota 4s ease-in-out infinite}
+.inicio h1{display:flex;flex-direction:column;color:inherit;line-height:1}
+.h1-pre{font-family:var(--titulo);font-weight:800;font-size:clamp(1.6rem,4vw,2.6rem);letter-spacing:.35em;text-transform:uppercase;color:var(--crema)}
+.h1-nombre{font-family:var(--script);font-weight:400;font-size:clamp(3.6rem,10vw,7rem);color:var(--amarillo);text-shadow:4px 4px 0 var(--rojo-oscuro);margin-top:.15em;transform:rotate(-3deg);transform-origin:left}
+.eslogan{font-family:var(--titulo);font-size:clamp(1.3rem,2.6vw,1.9rem);font-weight:600;margin:1.6rem 0 .3rem;max-width:26ch}
+.sub{margin:0 0 2rem;font-size:1.1rem;opacity:.92;max-width:42ch}
+.acciones{display:flex;flex-wrap:wrap;gap:1rem}
+.inicio-foto{position:relative;max-width:480px;justify-self:center;width:100%}
+.foto-destacada{margin:0;aspect-ratio:1/1;border-radius:50%;overflow:hidden;border:10px solid var(--amarillo);box-shadow:0 0 0 8px var(--rojo-oscuro),18px 22px 0 8px rgba(0,0,0,.22);animation:flota 6s ease-in-out infinite}
+.foto-destacada img{width:100%;height:100%;object-fit:cover}
+.sello{position:absolute;left:-18px;bottom:-10px;width:128px;height:128px;animation:gira 22s linear infinite;filter:drop-shadow(0 6px 8px rgba(0,0,0,.3))}
+.sello-texto{font:800 10.5px var(--cuerpo);fill:var(--rojo-oscuro);letter-spacing:.5px}
+.sello-centro{position:absolute;left:18px;bottom:18px;width:92px;height:92px;display:grid;place-items:center;font-size:2.2rem}
+.ola{position:absolute;left:0;bottom:-1px;width:100%;height:80px;display:block}
+@keyframes flota{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes gira{to{transform:rotate(360deg)}}
+
+/* Destacados */
+.destacados{padding:0 0 1rem;margin-top:-2.5rem;position:relative;z-index:2}
+.destacados-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.4rem}
+.destacado{background:#fff;border-radius:22px;padding:1.8rem 1.5rem;text-align:center;border:3px solid var(--amarillo);box-shadow:0 10px 0 var(--crema-2);transition:transform .25s,box-shadow .25s,background .25s}
+.destacado:hover{transform:translateY(-8px) rotate(-1deg);background:var(--rojo);box-shadow:0 18px 0 var(--rojo-oscuro)}
+.destacado:hover h2,.destacado:hover p{color:var(--crema)}
+.icono{display:grid;place-items:center;width:68px;height:68px;margin:0 auto .8rem;border-radius:50%;background:var(--crema);font-size:2rem}
+.destacado h2{font-size:1.3rem;margin-bottom:.3rem;transition:color .25s}
+.destacado p{margin:0;font-size:.95rem;transition:color .25s}
+
+/* Encabezados de sección */
+.encabezado{text-align:center;margin-bottom:2.2rem}
+.encabezado h2{font-size:clamp(2.2rem,5vw,3.4rem);color:var(--rojo)}
+.encabezado p{margin:.7rem auto 0;max-width:52ch}
+.etiqueta{display:inline-block;font-family:var(--script);font-size:1.6rem;color:var(--amarillo);background:var(--rojo);padding:.1rem 1.1rem .3rem;border-radius:999px;transform:rotate(-2deg);margin-bottom:.6rem}
+.etiqueta-clara{background:var(--amarillo);color:var(--rojo-oscuro)}
+
+/* Menú */
+.menu{padding-top:4.5rem}
+.filtros{display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;margin-bottom:3.2rem}
+.categoria{padding:0;margin-bottom:4rem}
+.categoria h3{display:inline-block;font-size:clamp(1.6rem,3vw,2.2rem);color:#fff;background:var(--rojo);padding:.35rem 1.6rem;border-radius:0 999px 999px 0;margin:0 0 1.8rem -4vw;padding-left:4vw;box-shadow:6px 6px 0 var(--amarillo)}
+.rejilla{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.8rem}
+
+/* Tarjetas de producto */
+.tarjeta{background:#fff;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;border:3px solid var(--crema-2);transition:transform .28s,box-shadow .28s,border-color .28s}
+.tarjeta:hover{transform:translateY(-10px) rotate(-1deg);box-shadow:10px 12px 0 var(--amarillo);border-color:var(--rojo)}
+.tarjeta .marco{position:relative;overflow:hidden}
+.tarjeta img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .5s}
+.tarjeta:hover img{transform:scale(1.1) rotate(1deg)}
+.tarjeta .cuerpo{padding:1.2rem 1.3rem 1.5rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
+.tarjeta h4{font-family:var(--titulo);font-size:1.3rem;margin:0;color:var(--rojo)}
+.tarjeta p{margin:0;font-size:.95rem}
+.precio{position:absolute;right:12px;bottom:12px;background:var(--amarillo);color:var(--cafe);font-weight:800;font-size:1rem;padding:.35rem .9rem;border-radius:999px;border:3px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,.25);transition:transform .3s,background .3s,color .3s}
+.tarjeta:hover .precio{background:var(--rojo);color:#fff;transform:scale(1.12) rotate(-4deg)}
+
+/* Nosotros */
+.nosotros{background:var(--crema-2);position:relative}
+.nosotros-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:center}
+.nosotros-foto{position:relative}
+.nosotros-foto::before{content:"";position:absolute;inset:18px -18px -18px 18px;background:var(--cuadros),var(--rojo);border-radius:24px}
+.nosotros-foto img{position:relative;border-radius:24px;border:8px solid #fff;aspect-ratio:4/5;object-fit:cover;width:100%;transform:rotate(-2deg);transition:transform .4s}
+.nosotros-foto:hover img{transform:rotate(0)}
+.nosotros h2{font-size:clamp(2.2rem,5vw,3.2rem);color:var(--rojo);margin-bottom:1.2rem}
+.nosotros p{max-width:58ch}
+blockquote{margin:1.6rem 0 0;padding:1rem 1.4rem;border-left:6px solid var(--amarillo);background:#fff;border-radius:0 16px 16px 0;font-family:var(--titulo);font-size:1.2rem;font-weight:600;color:var(--cafe)}
+
+/* Contacto */
+.contacto{background:var(--cuadros),var(--rojo-oscuro);color:var(--crema)}
+.contacto-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:2.5rem}
+.contacto .encabezado{grid-column:1/-1;margin-bottom:0}
+.contacto .encabezado h2{color:var(--crema)}
+.datos{display:grid;gap:1.5rem;align-content:start;font-style:normal;background:rgba(0,0,0,.2);padding:1.8rem;border-radius:22px;border:3px dashed var(--amarillo)}
+.datos h3{color:var(--amarillo);font-size:1.2rem;margin-bottom:.3rem}
+.datos p{margin:0}
+.datos a{text-decoration:none;font-weight:800;font-size:1.25rem;border-bottom:3px solid var(--amarillo);transition:color .2s}
+.datos a:hover{color:var(--amarillo)}
+.horario{width:100%;border-collapse:collapse}
+.horario td{padding:.35rem 0;border-bottom:1px dashed rgba(251,243,224,.35)}
+.horario td:last-child{text-align:right;font-weight:800}
+.mapa{border-radius:22px;overflow:hidden;min-height:360px;border:6px solid var(--amarillo);box-shadow:12px 12px 0 rgba(0,0,0,.25)}
+.mapa iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+
+footer{background:var(--cafe);color:var(--crema);text-align:center;padding:1.8rem 1rem;border-top:6px solid var(--amarillo)}
+footer p{margin:0;font-size:.9rem}
+.pie-nombre{font-family:var(--script);font-size:1.8rem!important;color:var(--amarillo)}
+
+/* Volver arriba */
+.arriba{position:fixed;right:1.2rem;bottom:1.2rem;width:54px;height:54px;border-radius:50%;border:3px solid #fff;background:var(--amarillo);color:var(--cafe);font-size:1.5rem;font-weight:800;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.35);opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .3s,transform .3s,background .2s,color .2s,visibility .3s;z-index:60}
+.arriba.visible{opacity:1;visibility:visible;transform:none}
+.arriba:hover{background:var(--rojo);color:#fff;transform:translateY(-5px)}
+
+/* Animación de entrada al hacer scroll (solo si hay JavaScript) */
+.js .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+.js .reveal.visible{opacity:1;transform:none}
+
+/* Responsive */
+@media (max-width:820px){
+  .hamburguesa{display:block}
+  .nav-lista{position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--rojo-oscuro);padding:.8rem 4%;gap:.2rem;border-bottom:4px solid var(--amarillo);box-shadow:0 12px 20px rgba(0,0,0,.3);display:none}
+  .nav-lista.abierto{display:flex}
+  .inicio{padding:3rem 0 7rem;text-align:center}
+  .inicio-grid,.nosotros-grid,.contacto-grid{grid-template-columns:1fr}
+  .inicio-texto{display:flex;flex-direction:column;align-items:center}
+  .h1-nombre{transform-origin:center}
+  .acciones{justify-content:center}
+  .inicio-foto{max-width:340px}
+  .sello{width:104px;height:104px;left:-8px}
+  .sello-centro{left:12px;bottom:12px;width:80px;height:80px;font-size:1.8rem}
+  .categoria h3{margin-left:-4vw}
+  .nosotros-foto{max-width:420px;margin-inline:auto}
+  section{padding:4rem 0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .reveal{opacity:1;transform:none}
+}

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pizzería Bella Napoli · Pizzas al horno de leña</title>
+<meta name="description" content="Menú completo, horarios y ubicación de Pizzería Bella Napoli en Canalete, Córdoba. Pizzas artesanales, entradas, bebidas y postres italianos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito+Sans:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="contenedor barra">
+    <a class="marca" href="#inicio" aria-label="Pizzería Bella Napoli, ir al inicio">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#f2b632"/><path d="M32 8 52 46H12Z" fill="#fbf3e0"/><circle cx="32" cy="30" r="3.5" fill="#b3262a"/><circle cx="25" cy="39" r="3" fill="#b3262a"/><circle cx="39" cy="39" r="3" fill="#b3262a"/></svg>
+      <span>Bella Napoli</span>
+    </a>
+    <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-lista"><span></span></button>
+    <nav aria-label="Principal">
+      <ul class="nav-lista" id="nav-lista">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- INICIO -->
+  <section class="inicio" id="inicio">
+    <div class="contenedor inicio-grid">
+      <div class="inicio-texto">
+        <!-- Reemplazar por el logo real: <img src="img/logo.png" alt="Logo Pizzería Bella Napoli"> -->
+        <svg class="logo-grande" viewBox="0 0 64 64" role="img" aria-label="Logo Pizzería Bella Napoli"><circle cx="32" cy="32" r="30" fill="#f2b632"/><circle cx="32" cy="32" r="26" fill="none" stroke="#b3262a" stroke-width="2" stroke-dasharray="3 3"/><path d="M32 12 50 44H14Z" fill="#fbf3e0"/><circle cx="32" cy="30" r="3.5" fill="#b3262a"/><circle cx="25" cy="38" r="3" fill="#b3262a"/><circle cx="39" cy="38" r="3" fill="#b3262a"/></svg>
+        <h1>
+          <span class="h1-pre">Pizzería</span>
+          <span class="h1-nombre">Bella Napoli</span>
+        </h1>
+        <p class="eslogan">El sabor de Nápoles, hecho a mano cada día.</p>
+        <p class="sub">Masa de 48 horas, tomate San Marzano y horno de leña.</p>
+        <div class="acciones">
+          <a class="btn btn-amarillo" href="#menu">Ver el menú</a>
+          <a class="btn btn-claro" href="#contacto">Cómo llegar</a>
+        </div>
+      </div>
+      <div class="inicio-foto">
+        <figure class="foto-destacada">
+          <!-- Foto de Unsplash. Para usar una propia: src="img/destacada.jpg" -->
+          <img src="https://unsplash.com/photos/GNV8SaJVS6o/download?force=true&w=900" data-fallback="#d63a2f" alt="Pizza margherita recién salida del horno de leña" width="600" height="600">
+        </figure>
+        <svg class="sello" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+          <circle cx="60" cy="60" r="58" fill="#f2b632"/>
+          <text class="sello-texto"><textPath href="#circ" textLength="285">HORNO DE LEÑA • HECHO A MANO • DESDE NÁPOLES •</textPath></text>
+        </svg>
+        <span class="sello-centro" aria-hidden="true">🍕</span>
+      </div>
+    </div>
+    <svg class="ola" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path fill="#fbf3e0" d="M0,50 C240,100 480,0 720,40 C960,80 1200,10 1440,50 L1440,90 L0,90Z"/></svg>
+  </section>
+
+  <!-- DESTACADOS -->
+  <section class="destacados" aria-label="Lo que nos hace diferentes">
+    <div class="contenedor destacados-grid">
+      <div class="destacado reveal"><span class="icono">🔥</span><h2>Horno de leña</h2><p>Cocción a más de 400 °C para una corteza crujiente.</p></div>
+      <div class="destacado reveal"><span class="icono">🍅</span><h2>Ingredientes frescos</h2><p>Tomate, albahaca y quesos seleccionados cada día.</p></div>
+      <div class="destacado reveal"><span class="icono">👐</span><h2>Masa artesanal</h2><p>Amasada a mano y reposada durante 48 horas.</p></div>
+    </div>
+  </section>
+
+  <!-- MENÚ -->
+  <section class="menu" id="menu">
+    <div class="contenedor">
+      <header class="encabezado reveal">
+        <span class="etiqueta">Buon appetito</span>
+        <h2>Nuestro menú</h2>
+        <p>Todo se prepara al momento con ingredientes frescos. Precios en pesos colombianos (COP).</p>
+      </header>
+      <nav class="filtros" aria-label="Categorías del menú">
+        <a class="btn btn-rojo" href="#pizzas">🍕 Pizzas</a>
+        <a class="btn btn-rojo" href="#entradas">🥖 Entradas</a>
+        <a class="btn btn-rojo" href="#bebidas">🍷 Bebidas</a>
+        <a class="btn btn-rojo" href="#postres">🍰 Postres</a>
+      </nav>
+      <!-- Las tarjetas se generan desde script.js (arreglo MENU) -->
+      <div id="menu-contenido"></div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="nosotros" id="nosotros">
+    <div class="contenedor nosotros-grid">
+      <div class="nosotros-foto reveal">
+        <!-- Foto de Unsplash. Para usar una propia: src="img/nosotros.jpg" -->
+        <img src="https://unsplash.com/photos/p7Q36vPBFs8/download?force=true&w=900" data-fallback="#e0a21c" alt="Pizza artesanal de Bella Napoli lista para servir" width="480" height="600" loading="lazy">
+      </div>
+      <article class="reveal">
+        <span class="etiqueta">Chi siamo</span>
+        <h2>Nuestra historia</h2>
+        <p>Bella Napoli nació de una receta familiar de masa napolitana y del deseo de compartirla con Canalete. Empezamos con un horno de leña y una idea sencilla: hacer la pizza como se hace en Nápoles.</p>
+        <p>Hoy seguimos fieles a esa idea. Amasamos a mano, dejamos reposar la masa dos días y usamos ingredientes frescos. Nada congelado, nada apurado.</p>
+        <blockquote>Queremos que cada visita se sienta como sentarse a la mesa con la familia.</blockquote>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contacto" id="contacto">
+    <div class="contenedor contacto-grid">
+      <header class="encabezado reveal">
+        <span class="etiqueta etiqueta-clara">Ven a vernos</span>
+        <h2>Visítanos</h2>
+      </header>
+      <address class="datos reveal">
+        <div><h3>📍 Dirección</h3><p>Canalete, Córdoba</p></div>
+        <div><h3>📞 Teléfono</h3><p><a href="tel:+573146039495">314 603 9495</a></p></div>
+        <div>
+          <h3>🕒 Horario de atención</h3>
+          <table class="horario">
+            <tr><td>Lunes a jueves</td><td>12:00 – 22:00</td></tr>
+            <tr><td>Viernes y sábado</td><td>12:00 – 23:30</td></tr>
+            <tr><td>Domingo</td><td>12:00 – 21:00</td></tr>
+          </table>
+        </div>
+      </address>
+      <div class="mapa reveal">
+        <!-- Para mayor precisión: Google Maps > Compartir > Insertar un mapa, y pegar aquí su iframe -->
+        <iframe title="Mapa de ubicación de Pizzería Bella Napoli" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Canalete,+C%C3%B3rdoba,+Colombia&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p class="pie-nombre">Pizzería Bella Napoli</p>
+  <p>© <span id="anio"></span> Todos los derechos reservados</p>
+</footer>
+
+<button class="arriba" id="btn-arriba" aria-label="Volver arriba">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pizzería Bella Napoli · Pizzas al horno de leña</title>
+<meta name="description" content="Menú completo, horarios y ubicación de Pizzería Bella Napoli en Canalete, Córdoba. Pizzas artesanales, entradas, bebidas y postres italianos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito+Sans:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="contenedor barra">
+    <a class="marca" href="#inicio" aria-label="Pizzería Bella Napoli, ir al inicio">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#f2b632"/><path d="M32 8 52 46H12Z" fill="#fbf3e0"/><circle cx="32" cy="30" r="3.5" fill="#b3262a"/><circle cx="25" cy="39" r="3" fill="#b3262a"/><circle cx="39" cy="39" r="3" fill="#b3262a"/></svg>
+      <span>Bella Napoli</span>
+    </a>
+    <button class="hamburguesa" id="btn-menu" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-lista"><span></span></button>
+    <nav aria-label="Principal">
+      <ul class="nav-lista" id="nav-lista">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- INICIO -->
+  <section class="inicio" id="inicio">
+    <div class="contenedor inicio-grid">
+      <div class="inicio-texto">
+        <!-- Reemplazar por el logo real: <img src="img/logo.png" alt="Logo Pizzería Bella Napoli"> -->
+        <svg class="logo-grande" viewBox="0 0 64 64" role="img" aria-label="Logo Pizzería Bella Napoli"><circle cx="32" cy="32" r="30" fill="#f2b632"/><circle cx="32" cy="32" r="26" fill="none" stroke="#b3262a" stroke-width="2" stroke-dasharray="3 3"/><path d="M32 12 50 44H14Z" fill="#fbf3e0"/><circle cx="32" cy="30" r="3.5" fill="#b3262a"/><circle cx="25" cy="38" r="3" fill="#b3262a"/><circle cx="39" cy="38" r="3" fill="#b3262a"/></svg>
+        <h1>
+          <span class="h1-pre">Pizzería</span>
+          <span class="h1-nombre">Bella Napoli</span>
+        </h1>
+        <p class="eslogan">El sabor de Nápoles, hecho a mano cada día.</p>
+        <p class="sub">Masa de 48 horas, tomate San Marzano y horno de leña.</p>
+        <div class="acciones">
+          <a class="btn btn-amarillo" href="#menu">Ver el menú</a>
+          <a class="btn btn-claro" href="#contacto">Cómo llegar</a>
+        </div>
+      </div>
+      <div class="inicio-foto">
+        <figure class="foto-destacada">
+          <!-- Foto de Unsplash. Para usar una propia: src="img/destacada.jpg" -->
+          <img src="https://unsplash.com/photos/GNV8SaJVS6o/download?force=true&w=900" data-fallback="#d63a2f" alt="Pizza margherita recién salida del horno de leña" width="600" height="600">
+        </figure>
+        <svg class="sello" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+          <circle cx="60" cy="60" r="58" fill="#f2b632"/>
+          <text class="sello-texto"><textPath href="#circ" textLength="285">HORNO DE LEÑA • HECHO A MANO • DESDE NÁPOLES •</textPath></text>
+        </svg>
+        <span class="sello-centro" aria-hidden="true">🍕</span>
+      </div>
+    </div>
+    <svg class="ola" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path fill="#fbf3e0" d="M0,50 C240,100 480,0 720,40 C960,80 1200,10 1440,50 L1440,90 L0,90Z"/></svg>
+  </section>
+
+  <!-- DESTACADOS -->
+  <section class="destacados" aria-label="Lo que nos hace diferentes">
+    <div class="contenedor destacados-grid">
+      <div class="destacado reveal"><span class="icono">🔥</span><h2>Horno de leña</h2><p>Cocción a más de 400 °C para una corteza crujiente.</p></div>
+      <div class="destacado reveal"><span class="icono">🍅</span><h2>Ingredientes frescos</h2><p>Tomate, albahaca y quesos seleccionados cada día.</p></div>
+      <div class="destacado reveal"><span class="icono">👐</span><h2>Masa artesanal</h2><p>Amasada a mano y reposada durante 48 horas.</p></div>
+    </div>
+  </section>
+
+  <!-- MENÚ -->
+  <section class="menu" id="menu">
+    <div class="contenedor">
+      <header class="encabezado reveal">
+        <span class="etiqueta">Buon appetito</span>
+        <h2>Nuestro menú</h2>
+        <p>Todo se prepara al momento con ingredientes frescos. Precios en pesos colombianos (COP).</p>
+      </header>
+      <nav class="filtros" aria-label="Categorías del menú">
+        <a class="btn btn-rojo" href="#pizzas">🍕 Pizzas</a>
+        <a class="btn btn-rojo" href="#entradas">🥖 Entradas</a>
+        <a class="btn btn-rojo" href="#bebidas">🍷 Bebidas</a>
+        <a class="btn btn-rojo" href="#postres">🍰 Postres</a>
+      </nav>
+      <!-- Las tarjetas se generan desde script.js (arreglo MENU) -->
+      <div id="menu-contenido"></div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section class="nosotros" id="nosotros">
+    <div class="contenedor nosotros-grid">
+      <div class="nosotros-foto reveal">
+        <!-- Foto de Unsplash. Para usar una propia: src="img/nosotros.jpg" -->
+        <img src="https://unsplash.com/photos/p7Q36vPBFs8/download?force=true&w=900" data-fallback="#e0a21c" alt="Pizza artesanal de Bella Napoli lista para servir" width="480" height="600" loading="lazy">
+      </div>
+      <article class="reveal">
+        <span class="etiqueta">Chi siamo</span>
+        <h2>Nuestra historia</h2>
+        <p>Bella Napoli nació de una receta familiar de masa napolitana y del deseo de compartirla con Canalete. Empezamos con un horno de leña y una idea sencilla: hacer la pizza como se hace en Nápoles.</p>
+        <p>Hoy seguimos fieles a esa idea. Amasamos a mano, dejamos reposar la masa dos días y usamos ingredientes frescos. Nada congelado, nada apurado.</p>
+        <blockquote>Queremos que cada visita se sienta como sentarse a la mesa con la familia.</blockquote>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contacto" id="contacto">
+    <div class="contenedor contacto-grid">
+      <header class="encabezado reveal">
+        <span class="etiqueta etiqueta-clara">Ven a vernos</span>
+        <h2>Visítanos</h2>
+      </header>
+      <address class="datos reveal">
+        <div><h3>📍 Dirección</h3><p>Canalete, Córdoba</p></div>
+        <div><h3>📞 Teléfono</h3><p><a href="tel:+573146039495">314 603 9495</a></p></div>
+        <div>
+          <h3>🕒 Horario de atención</h3>
+          <table class="horario">
+            <tr><td>Lunes a jueves</td><td>12:00 – 22:00</td></tr>
+            <tr><td>Viernes y sábado</td><td>12:00 – 23:30</td></tr>
+            <tr><td>Domingo</td><td>12:00 – 21:00</td></tr>
+          </table>
+        </div>
+      </address>
+      <div class="mapa reveal">
+        <!-- Para mayor precisión: Google Maps > Compartir > Insertar un mapa, y pegar aquí su iframe -->
+        <iframe title="Mapa de ubicación de Pizzería Bella Napoli" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Canalete,+C%C3%B3rdoba,+Colombia&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p class="pie-nombre">Pizzería Bella Napoli</p>
+  <p>© <span id="anio"></span> Todos los derechos reservados</p>
+</footer>
+
+<button class="arriba" id="btn-arriba" aria-label="Volver arriba">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
